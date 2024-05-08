@@ -47,5 +47,17 @@ public class LoginTest extends Base {
 	  Assert.assertTrue(ishomepageloaded, "Home page is not loaded when user is entering invalid password");
 	  
   }
+  public void verifyTheUserIsAbleToLoginWithInvalidCredentials() 
+  {
+	  String username="admin145";
+	  String password="admin123";
+	  LoginPage loginpage=new LoginPage(driver);
+	  loginpage.enterUserNameOnUserNameField(username);
+	  loginpage.enterPasswordOnPasswordField(password);
+	  loginpage.submitButtonClick();
+	  boolean ishomepageloaded=loginpage.isDashboardLoaded();
+	  Assert.assertTrue(ishomepageloaded, "Home page is not loaded when user is entering invalid credentials");
+	  
+  }
   
 }
