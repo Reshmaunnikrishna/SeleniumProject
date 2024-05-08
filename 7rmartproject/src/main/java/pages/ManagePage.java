@@ -17,7 +17,7 @@ public class ManagePage {
 
 	 @FindBy(xpath="//p[text()='Manage Pages']")private WebElement managepagetile;
 	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/pages/edit?edit=1301&page_ad=1']")private WebElement deleteicon;
-	// @FindBy(xpath="")private WebElement deliveryboytile;
+	 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alertpopup;
 	
 	 
 	 public void verifyIfUserIsAbleToClickonManagePages()
@@ -33,11 +33,12 @@ public class ManagePage {
 		 	JavascriptExecutor executor = (JavascriptExecutor)driver;
 		 	executor.executeScript("arguments[0].click();",deleteicon);
 		 	deleteicon.click();
+		 	driver.switchTo().alert().accept();
 		 
 	    }
-	 public void verifyIfAlertPopupIsDisplayed()
+	 public boolean verifyIfAlertPopupIsDisplayed()
 	    {
-
+		 	return alertpopup.isDisplayed();
 	    }
 	 
 }

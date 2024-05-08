@@ -1,5 +1,6 @@
 package testscript;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
@@ -18,8 +19,8 @@ public class ManagePageTest extends Base {
 	  ManagePage managepage=new ManagePage(driver);
 	  managepage.verifyIfUserIsAbleToClickonManagePages();
 	  managepage.verifyIfUserIsAbleToClickonDeleteButton();
-	  managepage.verifyIfAlertPopupIsDisplayed();
-	  
-	  
+	  boolean alertmessage=managepage.verifyIfAlertPopupIsDisplayed();
+	  Assert.assertTrue(alertmessage,"Alert message not displayed on clicking delete button");
+	 
   }
 }

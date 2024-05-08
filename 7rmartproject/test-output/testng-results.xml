@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-08T15:12:25 GST" name="Default suite" finished-at="2024-05-08T15:13:15 GST" duration-ms="49534">
+  <suite started-at="2024-05-08T18:28:00 GST" name="Default suite" finished-at="2024-05-08T18:28:19 GST" duration-ms="18288">
     <groups>
     </groups>
-    <test started-at="2024-05-08T15:12:25 GST" name="Default test" finished-at="2024-05-08T15:13:15 GST" duration-ms="49534">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscript.ManageNewsTest@662b4c69]" started-at="2024-05-08T15:12:25 GST" name="initializeBrowser" finished-at="2024-05-08T15:12:37 GST" duration-ms="11540" status="PASS">
+    <test started-at="2024-05-08T18:28:00 GST" name="Default test" finished-at="2024-05-08T18:28:19 GST" duration-ms="18288">
+      <class name="testscript.ManageLocationTest">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscript.ManageLocationTest@662b4c69]" started-at="2024-05-08T18:28:00 GST" name="initializeBrowser" finished-at="2024-05-08T18:28:12 GST" duration-ms="11046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyingIfUserisAbleToAddNewsUnderManageNews()[pri:0, instance:testscript.ManageNewsTest@662b4c69]" started-at="2024-05-08T15:12:37 GST" name="verifyingIfUserisAbleToAddNewsUnderManageNews" finished-at="2024-05-08T15:13:15 GST" duration-ms="37947" status="PASS">
+        <test-method signature="veryfingAddNewLocation()[pri:0, instance:testscript.ManageLocationTest@662b4c69]" started-at="2024-05-08T18:28:12 GST" name="veryfingAddNewLocation" finished-at="2024-05-08T18:28:19 GST" duration-ms="7200" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingIfUserisAbleToAddNewsUnderManageNews -->
-        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.ManageNewsTest@662b4c69]" started-at="2024-05-08T15:13:15 GST" name="driverQuitAndClose" finished-at="2024-05-08T15:13:15 GST" duration-ms="0" status="PASS">
+        </test-method> <!-- veryfingAddNewLocation -->
+        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.ManageLocationTest@662b4c69]" started-at="2024-05-08T18:28:19 GST" name="driverQuitAndClose" finished-at="2024-05-08T18:28:19 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuitAndClose -->
-      </class> <!-- testscript.ManageNewsTest -->
+      </class> <!-- testscript.ManageLocationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
