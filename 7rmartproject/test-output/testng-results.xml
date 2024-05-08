@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-08T10:42:18 GST" name="Default suite" finished-at="2024-05-08T10:42:35 GST" duration-ms="17630">
+  <suite started-at="2024-05-08T15:12:25 GST" name="Default suite" finished-at="2024-05-08T15:13:15 GST" duration-ms="49534">
     <groups>
     </groups>
-    <test started-at="2024-05-08T10:42:18 GST" name="Default test" finished-at="2024-05-08T10:42:35 GST" duration-ms="17630">
-      <class name="testscript.AdminUsersTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscript.AdminUsersTest@662b4c69]" started-at="2024-05-08T10:42:18 GST" name="initializeBrowser" finished-at="2024-05-08T10:42:27 GST" duration-ms="9519" status="PASS">
+    <test started-at="2024-05-08T15:12:25 GST" name="Default test" finished-at="2024-05-08T15:13:15 GST" duration-ms="49534">
+      <class name="testscript.ManageNewsTest">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscript.ManageNewsTest@662b4c69]" started-at="2024-05-08T15:12:25 GST" name="initializeBrowser" finished-at="2024-05-08T15:12:37 GST" duration-ms="11540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyingIfUserisAbleToAddNewEntryInAdminUsersPage()[pri:0, instance:testscript.AdminUsersTest@662b4c69]" started-at="2024-05-08T10:42:27 GST" name="verifyingIfUserisAbleToAddNewEntryInAdminUsersPage" finished-at="2024-05-08T10:42:35 GST" duration-ms="8070" status="PASS">
+        <test-method signature="verifyingIfUserisAbleToAddNewsUnderManageNews()[pri:0, instance:testscript.ManageNewsTest@662b4c69]" started-at="2024-05-08T15:12:37 GST" name="verifyingIfUserisAbleToAddNewsUnderManageNews" finished-at="2024-05-08T15:13:15 GST" duration-ms="37947" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingIfUserisAbleToAddNewEntryInAdminUsersPage -->
-        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.AdminUsersTest@662b4c69]" started-at="2024-05-08T10:42:35 GST" name="driverQuitAndClose" finished-at="2024-05-08T10:42:35 GST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyingIfUserisAbleToAddNewsUnderManageNews -->
+        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.ManageNewsTest@662b4c69]" started-at="2024-05-08T15:13:15 GST" name="driverQuitAndClose" finished-at="2024-05-08T15:13:15 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuitAndClose -->
-      </class> <!-- testscript.AdminUsersTest -->
+      </class> <!-- testscript.ManageNewsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
