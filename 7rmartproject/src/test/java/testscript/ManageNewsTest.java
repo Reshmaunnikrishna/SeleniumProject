@@ -12,8 +12,8 @@ public class ManageNewsTest extends Base{
 	  
 	  String username="admin";
 	  String password="admin";
-	  String news="newscheck123";
-	  String newsedit="news456";
+	  String news="newsheadline";
+	  String newsedit="sportsnews";
 	  LoginPage loginpage=new LoginPage(driver);
 	  loginpage.enterUserNameOnUserNameField(username);
 	  loginpage.enterPasswordOnPasswordField(password);
@@ -27,9 +27,12 @@ public class ManageNewsTest extends Base{
 	  boolean alertdisplay =managenewspage.verifyIfAlertDisplayed();
 	  Assert.assertTrue(alertdisplay, "Alert is not displayed");
 	  
+	  managenewspage.verifyIfUserIsAbleToClickMangeNewsTile();
 	  managenewspage.clickOnEditButton();
 	  managenewspage.updateNewsField(newsedit);
 	  managenewspage.clickOnUpdateButton();
+	  boolean alertdisplay1 =managenewspage.verifyIfAlertDisplayed();
+	  Assert.assertTrue(alertdisplay1, "Alert is not displayed");
 	  
   }
 }

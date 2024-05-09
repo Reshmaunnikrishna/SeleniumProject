@@ -16,8 +16,7 @@ public class ManagePage {
 	}
 
 	 @FindBy(xpath="//p[text()='Manage Pages']")private WebElement managepagetile;
-	 ////a[contains(@onclick,'return confirm')]
-	 @FindBy(xpath="//i[@class='fas fa-trash-alt']")private WebElement deleteicon;
+	 @FindBy(xpath="//i[@class='fas fa-trash-alt'][1]")private WebElement deleteicon;
 	 @FindBy(xpath="//a[@onclick=\"return confirm('Do you want to delete this Page?')\"]")private WebElement alertbutton;
 	 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alertsuccess;
 	
@@ -32,8 +31,7 @@ public class ManagePage {
 	 
 	 public void verifyIfUserIsAbleToClickonDeleteButton()
 	    {
-		 	JavascriptExecutor executor = (JavascriptExecutor)driver;
-		 	executor.executeScript("arguments[0].click();",deleteicon);
+		 
 		 	deleteicon.click();
 		 	driver.switchTo().alert().accept();
 		 

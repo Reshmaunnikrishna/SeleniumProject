@@ -20,8 +20,8 @@ public class ManagePageTest extends Base {
 	  managepage.verifyIfUserIsAbleToClickonManagePages();
 	  managepage.verifyIfUserIsAbleToClickonDeleteButton();
 	  managepage.verifyIfAlertButtonIsClicked();
-	  boolean alertmessage=managepage.verifyIfAlertPopupIsDisplayed();
-	  Assert.assertTrue(alertmessage,"Alert message not displayed on clicking delete button");
+	  boolean alertmsg=managepage.verifyIfAlertPopupIsDisplayed();
+	  Assert.assertTrue(alertmsg,"Alert message not displayed on clicking delete button");
 	 
   }
 }
