@@ -19,6 +19,7 @@ public class ManagePageTest extends Base {
 	  ManagePage managepage=new ManagePage(driver);
 	  managepage.verifyIfUserIsAbleToClickonManagePages();
 	  managepage.verifyIfUserIsAbleToClickonDeleteButton();
+	  managepage.verifyIfAlertButtonIsClicked();
 	  boolean alertmessage=managepage.verifyIfAlertPopupIsDisplayed();
 	  Assert.assertTrue(alertmessage,"Alert message not displayed on clicking delete button");
 	 

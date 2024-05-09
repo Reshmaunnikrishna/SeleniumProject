@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+//check if delete function is working and alert pop up is displayed
 public class ManagePage {
 	
 	WebDriver driver;
@@ -16,8 +16,10 @@ public class ManagePage {
 	}
 
 	 @FindBy(xpath="//p[text()='Manage Pages']")private WebElement managepagetile;
-	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/pages/edit?edit=1301&page_ad=1']")private WebElement deleteicon;
-	 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alertpopup;
+	 ////a[contains(@onclick,'return confirm')]
+	 @FindBy(xpath="//i[@class='fas fa-trash-alt']")private WebElement deleteicon;
+	 @FindBy(xpath="//a[@onclick=\"return confirm('Do you want to delete this Page?')\"]")private WebElement alertbutton;
+	 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alertsuccess;
 	
 	 
 	 public void verifyIfUserIsAbleToClickonManagePages()
@@ -36,9 +38,16 @@ public class ManagePage {
 		 	driver.switchTo().alert().accept();
 		 
 	    }
+	 
+	 public void verifyIfAlertButtonIsClicked()
+		{
+			alertbutton.click();
+			driver.switchTo().alert().accept();
+		}
+		
 	 public boolean verifyIfAlertPopupIsDisplayed()
 	    {
-		 	return alertpopup.isDisplayed();
+		 	return alertsuccess.isDisplayed();
 	    }
 	 
 }

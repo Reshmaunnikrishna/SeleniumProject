@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
+//Add new location by selecting country,state,location,delivery charge--> save and check alert message displayed
 public class ManageLocation {
 	WebDriver driver;
 	public  ManageLocation(WebDriver driver)

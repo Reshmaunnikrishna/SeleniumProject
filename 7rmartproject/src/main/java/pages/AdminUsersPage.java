@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
+//Add new user in this page by giving uname,pwd and usertype --> save
 public class AdminUsersPage {
 	WebDriver driver;
 	public  AdminUsersPage(WebDriver driver)

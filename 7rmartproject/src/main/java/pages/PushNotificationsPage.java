@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+//Add title and description in this page --> send and check if alert meesage is displayed
 public class PushNotificationsPage {
 	
 	WebDriver driver;
