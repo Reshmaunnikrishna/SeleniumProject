@@ -29,6 +29,8 @@ public class ManageExpense {
 		@FindBy(xpath="//textarea[@name='remarks']")private WebElement remarksfield;
 		@FindBy(xpath="//button[@type='submit']")private WebElement savebutton;
 		@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alerttext;
+		@FindBy(xpath="//p[text()='Manage Expense']")private WebElement manageexpensepage;
+		@FindBy(xpath="//i[@class='fas fa-trash-alt'][1]")private WebElement deleteicon;
 
 		public void verifyIfeUserIsAbleToClickOnManageExpense()
 		{
@@ -72,10 +74,9 @@ public class ManageExpense {
 			Select select=new Select(expensetypedropdown);
 			select.selectByIndex(expensetype);
 		}
-		public void verifyTheUserIsAbleToEnterTheAmount(int amount)
+		public void verifyTheUserIsAbleToEnterTheAmount(String amount)
 		{
-			 String amountString = String.valueOf(amount);
-			    amountfield.sendKeys(amountString);
+			    amountfield.sendKeys(amount);
 		}
 		public void verifyTheUserIsAbleToEnterTheRemarks( String remarks)
 		{
@@ -85,12 +86,23 @@ public class ManageExpense {
 		{
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("arguments[0].click();",savebutton);
-			savebutton.click();
+			//savebutton.click();
 		}
 		public boolean isAlertDisplayed()
 		{
 			return alerttext.isDisplayed();
 		}	
-
+		
+		public void verifyIfeUserIsAbleToGoBackOnManageExpense()
+		{
+			manageexpensepage.click();
+		}
+		public void verifyIfUserIsAbleToClickonDeleteButton()
+	    {
+		 
+		 	deleteicon.click();
+		 	driver.switchTo().alert().accept();
+		 
+	    }
 
 }

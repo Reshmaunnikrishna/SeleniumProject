@@ -18,7 +18,7 @@ public class ManageExpenseTest extends Base{
 	  
 	  int orderid=13;
 	  int purchaseid=15;
-	  int amount=150;
+	  String amount="150";
 	  String remarks="test123";
 	  
 	  ManageExpense manageexpense=new ManageExpense(driver);
@@ -35,6 +35,11 @@ public class ManageExpenseTest extends Base{
 	  manageexpense.verifyTheUserIsAbleToSaveTheItem();
 	  boolean alert=manageexpense.isAlertDisplayed();
 	  Assert.assertTrue(alert, "Alert not displayed");
+	  manageexpense.verifyIfeUserIsAbleToGoBackOnManageExpense();
+	  manageexpense.verifyIfUserIsAbleToClickonDeleteButton();
+	  boolean alert1=manageexpense.isAlertDisplayed();
+	  Assert.assertTrue(alert1, "Alert not displayed");
+	  
 	
 	  
 
