@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import utilities.PageUtility;
 //Add new user in this page by giving uname,pwd and usertype --> save
 public class AdminUsersPage {
 	WebDriver driver;
@@ -14,7 +16,7 @@ public class AdminUsersPage {
 			this.driver=driver;
 			PageFactory.initElements(driver , this);
 		}
-		    @FindBy(xpath="//p[text()='Admin Users']")private WebElement adminuserstile;
+		    @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")private WebElement adminuserstile;
 		    @FindBy(xpath="//a[@onclick='click_button(1)']")private WebElement newbutton;
 		    @FindBy(xpath="//input[@name='username']")private WebElement usernamefield;
 		    @FindBy(xpath="//input[@name='password']")private WebElement passwordfield;
@@ -26,24 +28,26 @@ public class AdminUsersPage {
 		    
 		    public void verifyIfUserIsAbleToClickAdminUsersTile()
 		    {
-		    	adminuserstile.click();
+		    	JavascriptExecutor js=(JavascriptExecutor)driver;
+				js.executeScript("arguments[0].click();",adminuserstile);
+		    	//adminuserstile.click();
 		    }
 		    public void verifyIfUserIsAbleToClickonNewButtonUnderAdminUsers()
 		    {
 		    	newbutton.click();
 		    }
-		    public void enterUsernameInUsernameField(String uname)
+		    public void enterUsernameInUsernameField(String usernametest)
 		    {
-		    	usernamefield.sendKeys(uname);
+		    	usernamefield.sendKeys(usernametest);
 		    }
-		    public void enterPasswordInPasswordField(String pwd)
+		    public void enterPasswordInPasswordField(String passwordtest)
 		    {
-		    	passwordfield.sendKeys(pwd);
+		    	passwordfield.sendKeys(passwordtest);
 		    }
 		    public void selectUserTypeFromDropdown()
 		    {
-		    	Select select=new Select(dropdown);
-		    	select.selectByIndex(1);
+		    	PageUtility pageutility=new PageUtility();
+				pageutility.selectValueUsingSelectByIndex(dropdown, 2);
 		    }	
 		    public void clickOnSaveButton()
 		    {

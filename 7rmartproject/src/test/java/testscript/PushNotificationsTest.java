@@ -1,17 +1,24 @@
 package testscript;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.PushNotificationsPage;
+import utilities.ExcelUtility;
 
 public class PushNotificationsTest extends Base {
   @Test
-  public void VerifyIfUserIsAbleToEnterDetailsOnPushNotification() {
+  public void VerifyIfUserIsAbleToEnterDetailsOnPushNotification() throws IOException {
 	  
-		  String username="admin";
-		  String password="admin";
+		  //String username="admin";
+		 // String password="admin";
+	  String username=ExcelUtility.getStringData(1, 0, "LoginPage");
+	  String password=ExcelUtility.getStringData(1, 1, "LoginPage");
 		  LoginPage loginpage=new LoginPage(driver);
 		  loginpage.enterUserNameOnUserNameField(username);
 		  loginpage.enterPasswordOnPasswordField(password);
