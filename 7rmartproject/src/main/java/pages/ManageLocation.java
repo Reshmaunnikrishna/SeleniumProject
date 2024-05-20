@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import utilities.WaitUtility;
 //Add new location by selecting country,state,location,delivery charge--> save and check alert message displayed
 public class ManageLocation {
 	WebDriver driver;
@@ -24,6 +26,8 @@ public class ManageLocation {
 	 
 	 public void verifyIfUserIsAbleToClickMangeLocationTile()
 	 {
+		 WaitUtility waitutility=new WaitUtility();
+		 waitutility.waitForElement(driver, managelocationtile);
 		 managelocationtile.click();
 	 }
 	 public void verifyIfUserIsAbleToClickOnNewButton()

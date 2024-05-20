@@ -18,7 +18,7 @@ public class ManageDeliveryBoyPage {
 		    @FindBy(xpath="//input[@placeholder='Name']")private WebElement namefield;
 		    @FindBy(xpath="//button[@type='submit']")private WebElement searchbutton ;
 		    @FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']")private WebElement table;
-		    
+		   
 		    public void verifyIfUserIsAbleToClickManageDeliveryBoyTile()
 		    {
 		    	deliveryboytile.click();

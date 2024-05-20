@@ -8,6 +8,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import utilities.WaitUtility;
+
 public class Base {
 	
 	WebDriver driver;
@@ -17,7 +19,7 @@ public class Base {
 		driver=new ChromeDriver();
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));// implicit wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
 	}
   @AfterMethod 
   public void driverQuitAndClose()
