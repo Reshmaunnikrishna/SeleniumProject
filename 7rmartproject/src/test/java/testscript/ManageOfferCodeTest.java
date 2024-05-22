@@ -2,6 +2,12 @@ package testscript;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -13,7 +19,7 @@ import utilities.ExcelUtility;
 
 public class ManageOfferCodeTest extends Base {
   @Test
-  public void veryfyingAddNewButtonUnderManageOfferCode() throws IOException {
+  public void veryfyingAddNewButtonUnderManageOfferCode() throws IOException, AWTException {
 	  
 	 // String username="admin";
 	  //String password="admin";
@@ -30,6 +36,7 @@ public class ManageOfferCodeTest extends Base {
 	  manageoffercode.verifyIfUserIsAbleToEnterOfferCodeValue("ABCOFF");
 	  manageoffercode.verifyIfUserIsAbleToSelectFirstOrderUser();
 	  manageoffercode.verifyIfUserIsAbleToEnterAmountValue("1500");
+	  manageoffercode.uploadImage();
 	  manageoffercode.verifyIfUserIsAbleToClickonSaveButton();
 	  boolean alertmsg= manageoffercode.verifyIfAlertIsDisplayed();
 	  Assert.assertTrue(alertmsg, "Alert message is not displayed");

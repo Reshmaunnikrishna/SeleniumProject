@@ -2,6 +2,10 @@ package testscript;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -37,7 +41,7 @@ public class AdminUsersTest extends Base {
 	  adminuserspage.selectUserTypeFromDropdown();
 	  adminuserspage.clickOnSaveButton();
 	  boolean isAlertDisplayed = adminuserspage.isAlertPopupDisplayed();
-      Assert.assertTrue(isAlertDisplayed,"Alert is not displayed on clicking save button");	 
+    Assert.assertTrue(isAlertDisplayed,"Alert is not displayed on clicking save button");	 
 	  
   }
 }

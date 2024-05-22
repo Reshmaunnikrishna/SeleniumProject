@@ -41,7 +41,7 @@ public class ManageSlider {
 	 	FileUploadUtility fileuploadutility = new FileUploadUtility();
 	 	//fileuploadutility.fileuploadUsingRobertClass(choosefilebutton, Constants.MANAGESLIDERIMAGE);
 	 	fileuploadutility.fileUploadUsingSendKeys(choosefilebutton, Constants.IMAGE);
-	 			}
+	 }
 
 	 public void passingValueTolinkTextField(String txt)
 	 {

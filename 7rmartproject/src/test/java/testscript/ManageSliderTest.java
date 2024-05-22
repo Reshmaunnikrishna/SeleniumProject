@@ -1,15 +1,20 @@
 package testscript;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import java.awt.AWTException;
 
-import dev.failsafe.internal.util.Assert;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ManageSlider;
 import utilities.ExcelUtility;
 
   public class ManageSliderTest extends Base {
 	  @Test
-	  public void AddSlider() 
+	  public void AddSlider() throws Exception 
 	  
 	  {
 		  String username=ExcelUtility.getStringData(1, 0, "LoginPage");
@@ -28,7 +33,7 @@ import utilities.ExcelUtility;
 		  manageslider.passingValueTolinkTextField(link);
 		  manageslider.saveButtonClick();
 		  boolean isalertdisplayed = manageslider.isAlertDisplayed();
-		  Assert.assertTrue(isalertdisplayed, "Alert not displayed");
+		Assert.assertTrue(isalertdisplayed, "Alert not displayed");
 		 // manageslider.manageSliderTileClick();
 	     // manageslider.deleteButtonClick();
 

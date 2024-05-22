@@ -1,10 +1,15 @@
 package pages;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import constants.Constants;
+import utilities.FileUploadUtility;
 
 public class ManageOfferCode {
 	WebDriver driver;
@@ -19,6 +24,7 @@ public class ManageOfferCode {
 	 @FindBy(xpath="//input[@name='offer_code']")private WebElement offercodefield;
 	 @FindBy(xpath="//input[@value='yes']")private WebElement radiobutton1;
 	 @FindBy(xpath="//input[@name='offer_price']")private WebElement amountfield;
+	 @FindBy(xpath="//input[@id='main_img']")private WebElement fileupload;
 	 @FindBy(xpath="//button[@name='create']")private WebElement savebutton;
 	 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alert;
 	 
@@ -46,6 +52,12 @@ public class ManageOfferCode {
 	    {
 		 amountfield.sendKeys(amount);
 	    }
+	 public void uploadImage() throws AWTException
+	    {
+		 FileUploadUtility fileuploadutility=new FileUploadUtility();
+		 fileuploadutility.fileuploadUsingRobertClass(fileupload, Constants.MANAGEOFFERCODEIMAGE);
+	    }
+	 
 	 public void verifyIfUserIsAbleToClickonSaveButton()
 	    {
 		 	JavascriptExecutor executor = (JavascriptExecutor)driver;
