@@ -45,7 +45,7 @@ public class LoginTest extends Base {
 	  Assert.assertTrue(ishomepageloaded, "Home page is not loaded when user is entering invalid credentials");
 	  
   }
-  @Test(description = "veryfying user is able to login with invalid username")
+  @Test(retryAnalyzer=retry.Retry.class ,groups= {"regression"},description = "veryfying user is able to login with invalid username")
   public void verifyTheUserIsAbleToLoginWithInvalidUsername() throws IOException 
   {
 	  String username=ExcelUtility.getStringData(2, 0, "LoginPage");

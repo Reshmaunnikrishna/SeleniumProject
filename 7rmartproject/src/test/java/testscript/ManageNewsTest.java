@@ -16,7 +16,7 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base{
-  @Test
+  @Test(retryAnalyzer=retry.Retry.class)
   public void verifyingIfUserisAbleToAddNewsUnderManageNews() throws IOException {
 	  
 	  //String username="admin";

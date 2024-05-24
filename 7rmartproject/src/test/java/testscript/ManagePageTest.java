@@ -16,7 +16,7 @@ import pages.ManagePage;
 import utilities.ExcelUtility;
 
 public class ManagePageTest extends Base {
-  @Test
+  @Test (retryAnalyzer=retry.Retry.class)
   public void veryfyingDeleteButtonUnderManagePages() throws IOException {
 	  //String username="admin";
 	 // String password="admin";
