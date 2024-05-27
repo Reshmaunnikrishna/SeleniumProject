@@ -6,12 +6,15 @@
     <listener class-name="generatereport.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
       <class name="testscript.LoginTest">
         <methods>
-          <include name="initializeBrowser"/>
           <include name="verifyTheUserIsAbleToLoginWithInvalidUsername"/>
-          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.LoginTest -->
     </classes>

@@ -3,19 +3,22 @@
 <suite name="Suite">
 	<parameter name="browser" value="chrome"></parameter>
 	<listeners>
-	<listener class-name="generatereport.Listeners"></listener>
-</listeners>
-  <test thread-count="5" name="Test">
-	  <groups>
-		  <run>
-			  <include name="reggression"></include>
-		  </run>
-	  </groups>
+		<listener class-name="generatereport.Listeners"></listener>
+	</listeners>
+ <test thread-count="5" name="Test">
 	  <classes>
-		  <class name="testScript.LoginTest">
-			 
+		  <class name="testscript.ManagePageTest">
+			 <methods>
+				
+			
+				 <include name="veryfyingDeleteButtonUnderManagePages">
+					 
+				 </include>
+				  
+			  </methods> 
 		  </class>
 		  
 	  </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite -->
+</suite>
+

@@ -1,211 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="0" total="5" passed="2" failed="0" skipped="0">
+<testng-results retried="2" ignored="3" total="6" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-24T13:54:43 GST" name="Parallel Class Testing" finished-at="2024-05-24T13:55:33 GST" duration-ms="49957">
+  <suite started-at="2024-05-24T14:11:16 GST" name="Suite" finished-at="2024-05-24T14:11:17 GST" duration-ms="1172">
     <groups>
+      <group name="regression">
+        <method signature="LoginTest.verifyTheUserIsAbleToLoginWithInvalidUsername()[pri:0, instance:testscript.LoginTest@1c481ff2]" name="verifyTheUserIsAbleToLoginWithInvalidUsername" class="testscript.LoginTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2024-05-24T13:54:43 GST" name="Test" finished-at="2024-05-24T13:55:33 GST" duration-ms="49957">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@42039326]" started-at="2024-05-24T13:54:43 GST" name="initializeBrowser" finished-at="2024-05-24T13:54:56 GST" duration-ms="12803" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyingIfUserisAbleToAddNewsUnderManageNews()[pri:0, instance:testscript.ManageNewsTest@42039326]" started-at="2024-05-24T13:54:56 GST" name="verifyingIfUserisAbleToAddNewsUnderManageNews" finished-at="2024-05-24T13:54:56 GST" duration-ms="129" status="SKIP">
-          <exception class="java.io.IOException">
+    <test started-at="2024-05-24T14:11:16 GST" name="Test" finished-at="2024-05-24T14:11:17 GST" duration-ms="1172">
+      <class name="testscript.LoginTest">
+        <test-method retried="true" signature="verifyTheUserIsAbleToLoginWithInvalidUsername()[pri:0, instance:testscript.LoginTest@1c481ff2]" started-at="2024-05-24T14:11:16 GST" name="verifyTheUserIsAbleToLoginWithInvalidUsername" description="veryfying user is able to login with invalid username" finished-at="2024-05-24T14:11:17 GST" duration-ms="920" status="SKIP">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Stream Closed]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.IOException: Stream Closed
-at java.base/java.io.FileInputStream.available0(Native Method)
-at java.base/java.io.FileInputStream.available(FileInputStream.java:415)
-at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
-at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:182)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:627)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:1146)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:1098)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:1028)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:78)
-at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:245)
-at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:208)
-at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:83)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-at testscript.ManageNewsTest.verifyingIfUserisAbleToAddNewsUnderManageNews(ManageNewsTest.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.IOException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingIfUserisAbleToAddNewsUnderManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@42039326]" started-at="2024-05-24T13:54:56 GST" name="browserQuit" finished-at="2024-05-24T13:54:56 GST" duration-ms="151" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyingIfUserisAbleToAddNewsUnderManageNews status=SKIP method=ManageNewsTest.verifyingIfUserisAbleToAddNewsUnderManageNews()[pri:0, instance:testscript.ManageNewsTest@42039326] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@42039326]" started-at="2024-05-24T13:54:56 GST" name="initializeBrowser" finished-at="2024-05-24T13:55:07 GST" duration-ms="10870" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyingIfUserisAbleToAddNewsUnderManageNews()[pri:0, instance:testscript.ManageNewsTest@42039326]" started-at="2024-05-24T13:55:07 GST" name="verifyingIfUserisAbleToAddNewsUnderManageNews" finished-at="2024-05-24T13:55:25 GST" duration-ms="18341" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingIfUserisAbleToAddNewsUnderManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@42039326]" started-at="2024-05-24T13:55:25 GST" name="browserQuit" finished-at="2024-05-24T13:55:26 GST" duration-ms="165" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyingIfUserisAbleToAddNewsUnderManageNews status=SUCCESS method=ManageNewsTest.verifyingIfUserisAbleToAddNewsUnderManageNews()[pri:0, instance:testscript.ManageNewsTest@42039326] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageNewsTest -->
-      <class name="testscript.ManagePageTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:54:43 GST" name="initializeBrowser" finished-at="2024-05-24T13:54:56 GST" duration-ms="12813" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:54:56 GST" name="veryfyingDeleteButtonUnderManagePages" finished-at="2024-05-24T13:54:56 GST" duration-ms="97" status="SKIP">
-          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
-            <message>
-              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:159)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-at testscript.ManagePageTest.veryfyingDeleteButtonUnderManagePages(ManagePageTest.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0xf017a7d5
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:770)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:150)
-... 23 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- veryfyingDeleteButtonUnderManagePages -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:54:56 GST" name="browserQuit" finished-at="2024-05-24T13:54:56 GST" duration-ms="166" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=veryfyingDeleteButtonUnderManagePages status=SKIP method=ManagePageTest.veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@4f25b795] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:54:56 GST" name="initializeBrowser" finished-at="2024-05-24T13:55:06 GST" duration-ms="9866" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:55:06 GST" name="veryfyingDeleteButtonUnderManagePages" finished-at="2024-05-24T13:55:09 GST" duration-ms="2712" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to find element with locator By.xpath: //input[@placeholder='Password']
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.2.1', java.version: '17.0.9'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //input[@placeholder='Password']
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.2.1', java.version: '17.0.9'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-at pages.LoginPage.enterPasswordOnPasswordField(LoginPage.java:35)
-at testscript.ManagePageTest.veryfyingDeleteButtonUnderManagePages(ManagePageTest.java:27)
+at pages.LoginPage.enterUserNameOnUserNameField(LoginPage.java:30)
+at testscript.LoginTest.verifyTheUserIsAbleToLoginWithInvalidUsername(LoginTest.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsAbleToLoginWithInvalidUsername -->
+        <test-method retried="true" signature="verifyTheUserIsAbleToLoginWithInvalidUsername()[pri:0, instance:testscript.LoginTest@1c481ff2]" started-at="2024-05-24T14:11:17 GST" name="verifyTheUserIsAbleToLoginWithInvalidUsername" description="veryfying user is able to login with invalid username" finished-at="2024-05-24T14:11:17 GST" duration-ms="93" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+at pages.LoginPage.enterUserNameOnUserNameField(LoginPage.java:30)
+at testscript.LoginTest.verifyTheUserIsAbleToLoginWithInvalidUsername(LoginTest.java:54)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -218,53 +80,75 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- veryfyingDeleteButtonUnderManagePages -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:55:09 GST" name="browserQuit" finished-at="2024-05-24T13:55:09 GST" duration-ms="115" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=veryfyingDeleteButtonUnderManagePages status=SKIP method=ManagePageTest.veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@4f25b795] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- verifyTheUserIsAbleToLoginWithInvalidUsername -->
+        <test-method signature="verifyTheUserIsAbleToLoginWithInvalidUsername()[pri:0, instance:testscript.LoginTest@1c481ff2]" started-at="2024-05-24T14:11:17 GST" name="verifyTheUserIsAbleToLoginWithInvalidUsername" description="veryfying user is able to login with invalid username" finished-at="2024-05-24T14:11:17 GST" duration-ms="95" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+at pages.LoginPage.enterUserNameOnUserNameField(LoginPage.java:30)
+at testscript.LoginTest.verifyTheUserIsAbleToLoginWithInvalidUsername(LoginTest.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:55:09 GST" name="initializeBrowser" finished-at="2024-05-24T13:55:19 GST" duration-ms="9947" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:55:19 GST" name="veryfyingDeleteButtonUnderManagePages" finished-at="2024-05-24T13:55:33 GST" duration-ms="14068" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- veryfyingDeleteButtonUnderManagePages -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManagePageTest@4f25b795]" started-at="2024-05-24T13:55:33 GST" name="browserQuit" finished-at="2024-05-24T13:55:33 GST" duration-ms="103" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=veryfyingDeleteButtonUnderManagePages status=SUCCESS method=ManagePageTest.veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@4f25b795] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManagePageTest -->
+        </test-method> <!-- verifyTheUserIsAbleToLoginWithInvalidUsername -->
+      </class> <!-- testscript.LoginTest -->
     </test> <!-- Test -->
-  </suite> <!-- Parallel Class Testing -->
+  </suite> <!-- Suite -->
 </testng-results>
