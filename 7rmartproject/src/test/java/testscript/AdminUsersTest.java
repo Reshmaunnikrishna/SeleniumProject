@@ -22,7 +22,7 @@ public class AdminUsersTest extends Base {
 	 // String username="admin";
 	 // String password="admin";
 	  
-	  String username=ExcelUtility.getStringData(1, 0, "LoginPage");
+	  String username=ExcelUtility.getStringData(1, 2, "LoginPage");
 	  String password=ExcelUtility.getStringData(1, 1, "LoginPage");
 	  String usernametest=ExcelUtility.getStringData(1, 0, "AdminUsers");
 	  String passwordtest=ExcelUtility.getStringData(1, 1, "AdminUsers");

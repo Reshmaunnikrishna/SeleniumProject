@@ -4,32 +4,32 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class ScreenshotUtility 
-{
+public class ScreenshotUtility {
 
-	public void getScreenShot(WebDriver driver, String failedTestCase) throws IOException {
-		TakesScreenshot scrShot = (TakesScreenshot) driver;
-		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
-		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());
+    public void captureFailureScreenShot(WebDriver driver, String name) throws IOException {
+        // Interface & method for Capture Screenshot
+        TakesScreenshot scrShot = (TakesScreenshot) driver;
+        File screenShot = scrShot.getScreenshotAs(OutputType.FILE); // screenshot will store in temporary path "screenShot"
 
-		File f1 = new File(System.getProperty("user.dir ") + "//OutputScreenShot");//folder creation
-		if (!f1.exists()) {			//if accidently folder gets deleted
-			f1.mkdirs();
-		}
+        // Creating folder using Java if it does not exist
+        File screenshotDir = new File(System.getProperty("user.dir") + File.separator + "OutputScreenshots");
+        if (!screenshotDir.exists()) {
+            screenshotDir.mkdirs(); // mkdir --> will create folder using java make directory
+        }
 
-		String destination = System.getProperty("user.dir") + "//outputScreenShot//" +
+        // Date-time capture using Java
+        String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());
 
-				failedTestCase + timeStamp + ".png";
+        // Final destination for the screenshot
+        File finalDestination = new File(screenshotDir, name + "_" + timeStamp + ".png");
 
-		File finalDestination = new File(destination);
-
-		FileHandler.copy(screenShot, finalDestination);
-	
-
-	}
+        // Copy screenshot from temp path to project folder
+        FileHandler.copy(screenShot, finalDestination);
+    }
 }
