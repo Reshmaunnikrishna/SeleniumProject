@@ -11,7 +11,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import utilities.ScreenshotUtility;
 import utilities.WaitUtility;
@@ -21,10 +21,10 @@ public class Base {
 	WebDriver driver;
 	public ScreenshotUtility scrshot;
 	@BeforeMethod 
-	//@Parameters("browser")
-  public void initializeBrowser() 
+	@Parameters("browser")
+  public void initializeBrowser(String browser) throws Exception  
 	{
-	/*	if(browser.equalsIgnoreCase("chrome"))
+	if(browser.equalsIgnoreCase("chrome"))
 		{
 			driver=new ChromeDriver();
 		}
@@ -44,8 +44,8 @@ public class Base {
 		{
 			throw new Exception("Invalid Browser");
 		}
-		*/
-		driver=new ChromeDriver();
+		
+		
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));

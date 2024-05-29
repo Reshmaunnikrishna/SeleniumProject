@@ -1,71 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-28T09:27:53 GST" name="Default suite" finished-at="2024-05-28T09:28:07 GST" duration-ms="13338">
+  <suite started-at="2024-05-28T13:20:25 GST" name="Suite" finished-at="2024-05-28T13:20:48 GST" duration-ms="23714">
     <groups>
+      <group name="regression">
+        <method signature="ManagePageTest.veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@62ef27a8]" name="veryfyingDeleteButtonUnderManagePages" class="testscript.ManagePageTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2024-05-28T09:27:53 GST" name="Default test" finished-at="2024-05-28T09:28:07 GST" duration-ms="13338">
-      <class name="testscript.AdminUsersTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscript.AdminUsersTest@614ca7df]" started-at="2024-05-28T09:27:53 GST" name="initializeBrowser" finished-at="2024-05-28T09:28:06 GST" duration-ms="12306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyingIfUserisAbleToAddNewEntryInAdminUsersPage()[pri:0, instance:testscript.AdminUsersTest@614ca7df]" started-at="2024-05-28T09:28:06 GST" name="verifyingIfUserisAbleToAddNewEntryInAdminUsersPage" finished-at="2024-05-28T09:28:06 GST" duration-ms="697" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because "c" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because "c" is null
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-at testscript.AdminUsersTest.verifyingIfUserisAbleToAddNewEntryInAdminUsersPage(AdminUsersTest.java:25)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingIfUserisAbleToAddNewEntryInAdminUsersPage -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminUsersTest@614ca7df]" started-at="2024-05-28T09:28:06 GST" name="browserQuit" finished-at="2024-05-28T09:28:07 GST" duration-ms="294" status="PASS">
+    <test started-at="2024-05-28T13:20:25 GST" name="Test" finished-at="2024-05-28T13:20:48 GST" duration-ms="23714">
+      <class name="testscript.ManagePageTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.ManagePageTest@62ef27a8]" started-at="2024-05-28T13:20:25 GST" name="initializeBrowser" finished-at="2024-05-28T13:20:39 GST" duration-ms="13995" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyingIfUserisAbleToAddNewEntryInAdminUsersPage status=FAILURE method=AdminUsersTest.verifyingIfUserisAbleToAddNewEntryInAdminUsersPage()[pri:0, instance:testscript.AdminUsersTest@614ca7df] output={null}]]]>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@62ef27a8]" started-at="2024-05-28T13:20:39 GST" name="veryfyingDeleteButtonUnderManagePages" finished-at="2024-05-28T13:20:48 GST" duration-ms="9502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- veryfyingDeleteButtonUnderManagePages -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManagePageTest@62ef27a8]" started-at="2024-05-28T13:20:48 GST" name="browserQuit" finished-at="2024-05-28T13:20:48 GST" duration-ms="167" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=veryfyingDeleteButtonUnderManagePages status=SUCCESS method=ManagePageTest.veryfyingDeleteButtonUnderManagePages()[pri:0, instance:testscript.ManagePageTest@62ef27a8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.AdminUsersTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testscript.ManagePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
