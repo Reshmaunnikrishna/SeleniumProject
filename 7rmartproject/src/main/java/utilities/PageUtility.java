@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-
+//`it has the repetitive methods present in the page class,code reusability and help the page class.
 public class PageUtility {
 	
 	public void scrollBy(WebDriver driver) {

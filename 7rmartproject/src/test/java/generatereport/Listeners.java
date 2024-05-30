@@ -17,7 +17,7 @@ public class Listeners extends Base implements ITestListener{
 
 	ExtentReports extent = ExtendReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
-//starting of testcase:ITestlistner fectch the method name of the testcase and add it to extends report
+//starting of testcase:ITestlistner fetch the method name of the testcase and add it to extends report
 	public void onTestStart(ITestResult result) {
 
 		ITestListener.super.onTestStart(result);

@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
-
+//Takes screenshot of the failed test cases.Takes screenshot of browsers current situation
 public class ScreenshotUtility {
 
     public void captureFailureScreenShot(WebDriver driver, String name) throws IOException {

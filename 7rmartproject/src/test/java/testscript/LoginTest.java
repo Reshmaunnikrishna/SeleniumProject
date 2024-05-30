@@ -1,20 +1,20 @@
 package testscript;
 
 import org.testng.annotations.Test;
-//import org.testng.AssertJUnit;
-//import org.testng.annotations.Test;
-//import org.testng.AssertJUnit;
-//import org.testng.annotations.Test;
-//import org.testng.AssertJUnit;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-//import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
-//import constants.Constants;
+import constants.Constants;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -45,7 +45,7 @@ public class LoginTest extends Base {
 	  Assert.assertTrue(ishomepageloaded, "Home page is not loaded when user is entering invalid credentials");
 	  
   }
-  @Test(retryAnalyzer=retry.Retry.class ,groups= {"regression"},description = "veryfying user is able to login with invalid username")
+  @Test(groups= {"regression"},description = "veryfying user is able to login with invalid username")
   public void verifyTheUserIsAbleToLoginWithInvalidUsername() throws IOException 
   {
 	  String username=ExcelUtility.getStringData(2, 0, "LoginPage");
