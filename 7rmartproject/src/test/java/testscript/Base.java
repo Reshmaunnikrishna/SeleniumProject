@@ -1,7 +1,10 @@
 package testscript;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,17 +16,31 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 //import org.testng.annotations.Test;
 
+import constants.Constants;
 import utilities.ScreenshotUtility;
 import utilities.WaitUtility;
 
 public class Base {
 	
 	WebDriver driver;
+	public Properties prop;
+	public FileInputStream fs;
 	public ScreenshotUtility scrshot;
-	@BeforeMethod 
+	
 	@Parameters("browser")
+	@BeforeMethod(alwaysRun = true)
   public void initializeBrowser(String browser) throws Exception  
 	{
+		try 
+		{
+			prop = new Properties();
+			fs = new FileInputStream(Constants.CONFIGfILE);
+			prop.load(fs);
+		} 
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+		}
 	if(browser.equalsIgnoreCase("chrome"))
 		{
 			driver=new ChromeDriver();
